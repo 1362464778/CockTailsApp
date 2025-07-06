@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">TALESS</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="main_menu_header">Welcome to Cocktails</string>
+    <string name="recycler_view_main_menu_item_title">Title</string>
+    <string name="recycler_view_main_menu_item_description">This is a fake description. Simulating lots of words rather than just one</string>
+    <string name="autocompleteAssist">Try "Gin", "Bourbon", "Daiquiri"..</string>
+    <string name="image_of_the_cocktail">Image of the cocktail</string>
+    <string name="favorites_button">Button with heart. Adds recipe to favorites</string>
+    <string name="favorites_Image">favorites_Image</string>
+    favorites_Image
+    <string name="grams">gr</string>
+    <string name="millilitres">ml</string>
+    <string name="ounces">oz</string>
+    <string name="teaspoons">tsp</string>
+    <string name="tablespoons">tbsp</string>
+
+    <string-array name="empty_array" />
+    <string-array name="themeOptionsKeys">
+        <item>light</item>
+        <item>dark</item>
+        <item>auto</item>
+    </string-array>
+    <string-array name="themeOptions">
+        <item>Light Theme</item>
+        <item>Dark Theme</item>
+        <item>System (Default)</item>
+    </string-array>
+
+
+    //Headings
+    <string name="heading_one">Welcome to TALESS </string>
+    <string name="heading_two">Find your favorites</string>
+    <string name="heading_three">Converter</string>
+    <string name="heading_four">Enjoy</string>
+
+    //Description
+    <string name="desc_one">A place to explore cocktails for all tastes</string>
+    <string name="desc_two">An extensive catalogue, guaranteed to find something you will love</string>
+    <string name="desc_three">We make your life easier converting between values</string>
+    <string name="desc_four">Enjoy responsibly, DON\'T drink and drive</string>
+
+    <string name="ingredients">Ingredients</string>
+    <string name="calories">Calories</string>
+    <string name="preparation_time">Prep time</string>
+    <string name="preparation">Preparation</string>
+    <string name="cocktailSteps">1.Add the gin, lemon juice, maraschino liqueur, and creme de violette to a cocktail shaker. Fill it with ice and shake it for 30sec.\n2.Strain into a cocktail glass. Garnish with a Luxardo cherry, if desired.</string>
+    <string name="timer">Timer</string>
+    <string name="exampleIngredients">1 ounce\n2 ounces\n3 something</string>
+    <string name="exampleIngredientNames">Vodka something alcohol even more alcohol</string>
+    <string name="tales_for_males">Tales For Males</string>
+
+    //Intro
+    <string name="Description">Description</string>
+    <string name="Title">Title</string>
+    <string name="Get_started">Get started</string>
+    <string name="Skip">Skip</string>
+    <string name="Intro_next_imageButton">Intro_next_imageButton</string>
+    <string name="Settings">Settings</string>
+    <string name="Search_imageButton">Search_imageButton</string>
+    <string name="Hint_for_conversion">"2 ".5", "2/3", "1/8"</string>
+
+    //Converter
+    <string name="Unit_Converter">Unit Converter</string>
+    <string name="To">To</string>
+    <string name="From">From</string>
+    <string name="Clear">Clear</string>
+    <string name="Results">Results will be printed here</string>
+    <string name="Enter_Here">Enter Here</string>
+
+    <string name="Intro_Image">Intro Image</string>
+
+    <string name="Animation_image">Animation image for stir or shake</string>
+    <string name="favourite">Add this recipe to your favorites</string>
+
+    //Settings
+    <string name="SettingsApp">The app</string>
+    <string name="SettingsFAQ">Frequently Asked Questions</string>
+    <string name="SettingsTeam">The team</string>
+    <string name="whyAnswer">The name came as a use of the word \"tales\" that you can hear when you say \"Cocktails\" and also because after drinking some Cocktails \"ta less\". In Greek that means that you talk about stuff :).</string>
+    <string name="whyQuestion">Why is the name \'TALESS\'?</string>
+    <string name="devTimeQuestion">How long did it take to develop TALESS?</string>
+    <string name="devTimeAnswer">It took some amount of time and the extension may or may not have helped, who knows</string>
+
+    <string name="the_team_title">The Team</string>
+    <string name="antonis_name">Antonios Papavasileiou</string>
+    <string name="antonis_description">The man with the plan. He wanted to create an AI by doing if else statements so deep you\'d probably find diamonds. Instead he spent his week writing SQL inserts for this app. The design and the team have no one else to thank but him.</string>
+    <string name="alket_name">Alket Saliaj</string>
+    <string name="alket_description">Quite the mystery this man. He speak little, codes a lot. He creates Java but surprisingly, doesn\'t drink it. He prefers Gin and Juice like a true gentleman.</string>
+    <string name="liakos_name">Elias Kodoulas</string>
+    <string name="liakos_description">A visionary. Dude writes java as good as the one he drinks. Developing is to him like photosynthesizing is to plants. He likes bolognese a little too much.</string>
+
+
+    <string name="Elias_Kodoulas_image">Elias Kodoulas image</string>
+    <string name="Alket_Saliaj_image">Alket Saliaj image</string>
+    <string name="Antonios_Papavasileiou_image">Antonios Papavasileiou image</string>
+    <string name="pressAgainTV">Long press to restart the timer.</string>
+
+
+</resources>
