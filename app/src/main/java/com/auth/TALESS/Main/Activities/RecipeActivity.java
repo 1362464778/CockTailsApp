@@ -52,12 +52,21 @@ public class RecipeActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
         Utilities.setAnimationAndExcludeTargets(getWindow());
 
-        recipe = (CocktailRecipe) getIntent().getSerializableExtra("recipe");
+        // This line is redundant as the next one overwrites it.
+        // recipe = (CocktailRecipe) getIntent().getSerializableExtra("recipe");
 
         ImageView imgView = findViewById(R.id.cocktailImage_recipe);
         titleTV = findViewById(R.id.title_recipe);
         TextView descriptionTV = findViewById(R.id.description_recipe);
         recipe = getIntent().getParcelableExtra("recipe");
+
+        // =======================================================
+        // == 在这里添加代码来记录历史 ==
+        if (recipe != null) {
+            db.addRecipeToHistory(recipe.get_id(), MainActivity.currentUserId);
+        }
+        // =======================================================
+
         int rid = getResources().getIdentifier(
                 recipe.get_imageid(), "drawable", getPackageName());
         Glide.with(this).load(rid).transform(new CenterCrop(), new GranularRoundedCorners(15,0,0,15)).into(imgView);
@@ -244,4 +253,3 @@ public class RecipeActivity extends AppCompatActivity {
             timer.cancel();
     }
 }
-

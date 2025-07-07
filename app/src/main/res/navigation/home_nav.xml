@@ -11,6 +11,11 @@
         android:label="fragment_favourites"
         tools:layout="@layout/fragment_favourites" />
     <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.auth.TALESS.Main.Fragments.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
         android:id="@+id/converters"
         android:name="com.auth.TALESS.Main.Fragments.ConvertersFragment"
         android:label="fragment_converters"

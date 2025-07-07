@@ -28,7 +28,7 @@ public class SenpaiDB extends SQLiteOpenHelper {
     private static final String TAG = "SENPAI";
     public static String DB_PATH;
     public static String DB_NAME = "database.db";
-    public static final int DATABASE_VERSION = 5;
+    public static final int DATABASE_VERSION = 12;
     public static boolean updated = false;
 
     public static SenpaiDB instance;
@@ -172,9 +172,9 @@ public class SenpaiDB extends SQLiteOpenHelper {
      * @caution if FAVORITES schema changes this needs to be refactored to reflect that change
      */
     private void restoreFavoritesDuringUpgrade(ArrayList<Integer> favorites) {
-        if (database != null)
-            for (int recipe_id : favorites)
-                database.execSQL("INSERT INTO FAVORITES(recipeid) values (" + recipe_id + ")");
+//        if (database != null)
+//            for (int recipe_id : favorites)
+//                database.execSQL("INSERT INTO FAVORITES(recipeid) values (" + recipe_id + ")");
     }
 
     /* All methods below use the same pattern of running an SQL Query on the database object
@@ -266,6 +266,30 @@ public class SenpaiDB extends SQLiteOpenHelper {
         }
         cursor.close();
         return null;
+    }
+
+    /**
+     * 将一个配方添加到指定用户的历史记录中。
+     * 为了防止重复，先删除旧记录，再插入新记录，这样可以保证每个配方只出现一次。
+     */
+    public void addRecipeToHistory(int recipeId, long userId) {
+        if (database != null) {
+            // 先删除，再添加，避免重复记录
+            database.execSQL("DELETE FROM HISTORY WHERE recipeid = " + recipeId + " AND userid = " + userId);
+            database.execSQL("INSERT INTO HISTORY(recipeid, userid) VALUES (" + recipeId + ", " + userId + ")");
+        }
+    }
+
+    /**
+     * 获取指定用户的历史记录配方列表。
+     */
+    public ArrayList<CocktailRecipe> getHistoryRecipes(long userId) {
+        if (database == null || !database.isOpen()) openDatabase();
+        String query = "SELECT r.recipeid, r.title, r.description, r.steps, r.drink, r.imageid, r.color, r.preptime, r.calories, r.timer" +
+                " FROM RECIPES r INNER JOIN HISTORY h ON r.recipeid = h.recipeid WHERE h.userid = " + userId +
+                " ORDER BY viewed_at DESC";
+        Cursor cursor = database.rawQuery(query, null);
+        return DataclassTransformations.transformToCocktailRecipeList(cursor);
     }
 }
 
