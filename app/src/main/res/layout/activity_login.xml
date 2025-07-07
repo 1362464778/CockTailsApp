@@ -9,14 +9,14 @@
         android:id="@+id/edit_text_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="用户名" />
+        android:hint="Username" />
 
     <EditText
         android:id="@+id/edit_text_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="密码"
+        android:hint="Password"
         android:inputType="textPassword" />
 
     <Button
@@ -24,12 +24,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="登录" />
+        android:text="Login" />
 
     <Button
         android:id="@+id/button_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="注册" />
+        android:text="Sign up" />
 </LinearLayout>

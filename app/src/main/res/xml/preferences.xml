@@ -56,7 +56,7 @@
     </PreferenceCategory>
     <Preference
         app:key="logout"
-        app:title="注销"
-        app:summary="退出当前账户" />
+        app:title="Log out"
+        app:summary="Log out" />
 
 </PreferenceScreen>

@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         String password = passwordEditText.getText().toString().trim();
 
         if (username.isEmpty() || password.isEmpty()) {
-            Toast.makeText(this, "用户名和密码不能为空", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Username and password can't be empty", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -56,9 +56,9 @@ public class LoginActivity extends AppCompatActivity {
             long newUserId = db.insertUser(username, password);
             runOnUiThread(() -> {
                 if (newUserId == -1) {
-                    Toast.makeText(this, "用户名已存在", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Username already exists", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(this, "注册成功，请登录", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Sign up success, please login", Toast.LENGTH_SHORT).show();
                 }
             });
         }).start();
@@ -69,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
         String password = passwordEditText.getText().toString().trim();
 
         if (username.isEmpty() || password.isEmpty()) {
-            Toast.makeText(this, "用户名和密码不能为空", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Username and password can't be empty", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -80,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
                     SessionManager.saveUserId(this, user.id);
                     navigateToMain(user.id);
                 } else {
-                    Toast.makeText(this, "用户名或密码错误", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Username or password wrong!", Toast.LENGTH_SHORT).show();
                 }
             });
         }).start();
